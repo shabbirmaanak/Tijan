@@ -7,7 +7,9 @@ let initialized = false;
 
 export function getDb(): Client {
   if (!dbClient) {
-    const url = process.env.TURSO_DATABASE_URL || 'file:topi.db';
+    const isVercel = Boolean(process.env.VERCEL);
+    const defaultUrl = isVercel ? 'file:/tmp/topi.db' : 'file:topi.db';
+    const url = process.env.TURSO_DATABASE_URL || defaultUrl;
     const authToken = process.env.TURSO_AUTH_TOKEN;
 
     dbClient = createClient({

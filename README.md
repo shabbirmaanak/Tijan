@@ -74,6 +74,24 @@ npm start
 
 ---
 
+## 🚀 Deploying to Vercel
+
+The application is edge-ready and built to deploy directly on **Vercel** with **Turso SQLite**:
+
+1. **Import the Repository**:
+   - Push your code to GitHub (`https://github.com/shabbirmaanak/Tijan.git`).
+   - Go to [vercel.com/new](https://vercel.com/new) and import the repository.
+   - Framework preset: **Next.js**.
+
+2. **Configure Environment Variables** (in Vercel Project Settings):
+   - `TURSO_DATABASE_URL`: `libsql://your-turso-db.turso.io`
+   - `TURSO_AUTH_TOKEN`: `your-turso-jwt-token`
+
+3. **Deploy**:
+   - Click **Deploy**. Vercel will build and deploy the Next.js app on edge serverless functions with zero configuration.
+
+---
+
 ## Project Structure
 
 ```
